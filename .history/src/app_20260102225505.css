@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: var(--dark);
+  --color-medyolight: var(--medyolight);
+  --color-light: var(--light);
+}
+
+:root {
+  font-family: poppins;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #0B0B0B;
+  background-color: #F2F2F7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --dark: #0B0B0B;
+  --light: #F2F2F7;
+  --medyolight: #3D3D3D;
+  --light_bg: #F2F2F7;  
+  
+  --tooltip-bg: var(--dark); 
+  --tooltip-text: var(--light); 
+  --tooltip-border: var(--dark);
+}
+
+.dark-mode {
+  --dark: #0B0B0B;
+  --medyolight: #E0E0E0;
+  --light: #F2F2F7;
+  --light_bg: #0B0B0B;  
+}
+
+.dark-mode {
+  background-color: var(--dark);
+  color: var(--light);
+  border-top-color: var(--light);
+}
+
+html{
+  scroll-behavior: smooth;
+  transition: color 0.3s ease; 
+
+}
+
+h1 {
+  font-size: clamp(4rem, 7vw, 8rem);
+  font-weight: 700; 
+  line-height: 1.1; 
+}
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1; 
+}
+h3 {
+  font-size: clamp(2rem, 6vw, 2.2rem);
+  line-height: 1.1; 
+}
+h4 {
+  font-size: clamp(1rem, 6vw, 2rem);
+  line-height: 1.1; 
+}
+h5{
+  font-size: clamp(2rem, 3vw, 2.5rem);
+}
+p{
+  font-size: clamp(1rem, 6vw, 1.2rem);
+  color: var(--medyolight);
+}
+
+span{
+  color: var(--light);
+  background-color: ;
+}
+
+.border-light {
+  border-color: transparent;
+}
+.border-t-light {
+  border-top-color: var(--dark);
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+

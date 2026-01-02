@@ -1,0 +1,55 @@
+<script>
+  import { onMount } from "svelte";
+  import viteLogo from "/vite.svg";
+
+  let navRef;
+  let showSticky = false;
+
+  onMount(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        showSticky = !entry.isIntersecting; 
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(navRef);
+  });
+</script>
+
+<!-- NORMAL NAV (default visible) -->
+<nav bind:this={navRef} class="px-6 py-4">
+  <div class="flex justify-between items-center">
+    <h6 class="text-5xl font-semibold">LC</h6>
+
+    <ul class="flex gap-12 text-lg">
+      <li class="hover:text-indigo-400 cursor-pointer">Home</li>
+      <li class="hover:text-indigo-400 cursor-pointer">About</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Projects</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Contact</li>
+    </ul>
+
+    <img src={viteLogo} class="h-10" />
+  </div>
+</nav>
+
+
+<!-- STICKY NAV (lumalabas lang pag nawala yung nasa taas) -->
+<nav
+  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
+  ${showSticky ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
+  bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-xl`}
+>
+  <div class="flex justify-between items-center px-6 py-4">
+    <h6 class="text-5xl font-semibold">LC</h6>
+
+    <ul class="flex gap-12 text-lg">
+      <li class="hover:text-indigo-400 cursor-pointer">Home</li>
+      <li class="hover:text-indigo-400 cursor-pointer">About</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Projects</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Contact</li>
+    </ul>
+
+    <img src={viteLogo} class="h-10" />
+  </div>
+</nav>
