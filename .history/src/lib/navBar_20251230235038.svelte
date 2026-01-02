@@ -1,0 +1,21 @@
+<nav
+  class={`fixed top-0 left-0 right-0 z-50
+  ${showSticky 
+    ? "translate-y-0 opacity-100 duration-500" 
+    : "-translate-y-full opacity-0 duration-0"
+  }
+  transition-all bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-xl`}
+>
+  <div class="flex justify-between items-center px-6 py-4">
+    <h6 class="text-5xl font-semibold">LC</h6>
+
+    <ul class="flex gap-12 text-lg">
+      <li class="hover:text-indigo-400 cursor-pointer">Home</li>
+      <li class="hover:text-indigo-400 cursor-pointer">About</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Projects</li>
+      <li class="hover:text-indigo-400 cursor-pointer">Contact</li>
+    </ul>
+
+    <img src={viteLogo} class="h-10" />
+  </div>
+</nav>
