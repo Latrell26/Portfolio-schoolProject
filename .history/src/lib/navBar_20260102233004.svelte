@@ -100,6 +100,7 @@
   <div class="flex justify-between items-center max-w-7xl mx-auto px-4">
     <h5 class="font-semibold">LC</h5>
 
+    <!-- Desktop nav -->
     <ul class="hidden md:flex gap-12 text-lg">
       {#each ["home","about","education","projects","contact"] as item}
         <li class="hover:underline underline-offset-4">
@@ -111,6 +112,7 @@
       {/each}
     </ul>
 
+    <!-- Mobile hamburger/X -->
     <button class="md:hidden text-3xl font-bold z-50" on:click={() => menuOpen = !menuOpen}>
       {#if menuOpen} ✕ {:else} ☰ {/if}
     </button>

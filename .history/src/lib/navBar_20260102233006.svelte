@@ -111,6 +111,7 @@
       {/each}
     </ul>
 
+    <!-- Mobile hamburger/X -->
     <button class="md:hidden text-3xl font-bold z-50" on:click={() => menuOpen = !menuOpen}>
       {#if menuOpen} ✕ {:else} ☰ {/if}
     </button>
