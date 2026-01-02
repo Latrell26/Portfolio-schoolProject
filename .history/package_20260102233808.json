@@ -1,0 +1,28 @@
+{
+  "name": "my-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://<latrell26>.github.io/<repo-name>/",
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "svelte": "^5.43.8",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@lottiefiles/svelte-lottie-player": "^0.3.1",
+    "svelte-toggle-switch": "^2.0.0"
+  }
+}
